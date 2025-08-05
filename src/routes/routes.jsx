@@ -4,7 +4,6 @@ import LoginPage from '../custom_components/auth/Login';
 import Dashboard from '../custom_components/dashboard/Dashboard';
 import WelcomePage from '../custom_components/welcome/Welcome';
 import ClassLists from '../custom_components/class/ClassList';
-import { DiVim } from 'react-icons/di';
 
 const CustomRoutes = () => {
   return (
