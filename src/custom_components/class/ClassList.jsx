@@ -4,7 +4,7 @@ import { GoPlus } from "react-icons/go";
 import { CiSearch } from "react-icons/ci";
 import { CiEdit } from "react-icons/ci";
 import { FaRegEye } from "react-icons/fa6";
-import Modal from "./Model";
+import ClassModal from "./ClassModel";
 
 const ClassLists = () => {
     const [modalOpen, setModalOpen] = useState(false);
@@ -41,16 +41,20 @@ const ClassLists = () => {
                                     <span className="text-gray-500 text-md font-semibold">Add Class</span>
                                 </span>
                             </button>
-                            <Modal openModal={modalOpen} closeModal={() => setModalOpen(false)} />
+                            <ClassModal openModal={modalOpen} closeModal={() => setModalOpen(false)} />
                         </div>
                     </div>
                     <div>
-                        <span className="flex items-center w-full bg-gray-100 relative py-1 px-5 rounded-xl focus:ring-1 focus:ring-blue-500">
-                            <input className="w-full border-0 bg-transparent h-10 focus:outline-none" placeholder="Quick search..." type="text" />
+                        <div className="flex items-center w-full bg-gray-100 relative py-1 px-5 rounded-xl focus-within:ring-2 focus-within:ring-blue-500 transition">
+                            <input
+                                className="w-full border-0 bg-transparent h-10 focus:outline-none"
+                                placeholder="Quick search..."
+                                type="text"
+                            />
                             <div>
                                 <CiSearch className="text-gray-500 text-2xl" />
                             </div>
-                        </span>
+                        </div>
                     </div>
                     {/* Table Section */}
                     <div className="overflow-x-auto w-full my-4">

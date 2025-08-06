@@ -6,13 +6,13 @@ import Navbar from "../header/Header";
 
 const Dashboard = () => {
     return (
-        <div className="flex h-screen">
-            <div className="w-64 fixed"><Sidebar/></div>
-            <div className=" flex flex-1 flex-col">
-                <div className="lg:ml-64">
+        <div className="flex h-screen ">
+            <div className="hidden lg:block fixed top-0 left-0 h-full w-64 z-50"><Sidebar/></div>
+            <div className=" flex flex-1 flex-col lg:ml-64">
+                <div className="fixed top-0 left-0 lg:left-64 right-0 z-40">
                     <Navbar/>
                 </div>
-                <div className="lg:ml-64 p-6 bg-gray-100">
+                <div className=" mt-[60px] p-4 bg-gray-100 overflow-y-auto">
                     <Outlet />
                 </div>
             </div>
